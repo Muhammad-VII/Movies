@@ -17,29 +17,27 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" routerLink="home"
-          >Home <span class="sr-only"></span
-        ></a>
+        <a class="nav-link" routerLink="home" *ngIf = "!isLogin">Home</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" routerLink="about">About</a>
+        <a class="nav-link" routerLink="about" *ngIf = "!isLogin">About</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" routerLink="movies">Movies</a>
+        <a class="nav-link" routerLink="movies" *ngIf = "!isLogin">Movies</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" routerLink="tvshows">Tv shows</a>
+        <a class="nav-link" routerLink="tvshows" *ngIf = "!isLogin">Tv shows</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" routerLink="network">Network</a>
+        <a class="nav-link" routerLink="network" *ngIf = "!isLogin">Network</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" routerLink="people">People</a>
+        <a class="nav-link" routerLink="people" *ngIf = "!isLogin">People</a>
       </li>
     </ul>
 
@@ -62,15 +60,15 @@
   </div>
 
   <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
+    <li *ngIf = "isLogin" class="nav-item">
       <a class="nav-link" routerLink="login">login</a>
     </li>
 
-    <li class="nav-item">
+    <li *ngIf = "!showNavLinks" class="nav-item">
       <a class="nav-link" routerLink="register">Register</a>
     </li>
 
-    <li class="nav-item">
+    <li *ngIf = "showNavLinks" class="nav-item">
       <a class="nav-link" (click) = "logout()">Logout</a>
     </li>
   </ul>

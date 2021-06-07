@@ -30,6 +30,7 @@ export class SigninComponent implements OnInit {
       if(data.message == 'success')
       {
         localStorage.setItem('userSession', data.token)
+        this._AuthService.saveCurrentUser()
         this._Router.navigateByUrl("/home")
       }
       else

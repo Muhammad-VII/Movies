@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { CanActivate, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
