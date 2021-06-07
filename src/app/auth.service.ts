@@ -12,4 +12,9 @@ export class AuthService {
     {
      return this._HttpClient.post("https://route-egypt-api.herokuapp.com/signup", {formData});
     }
+
+  login(loginForm: any):Observable<any>
+  {
+    return this._HttpClient.post("https://route-egypt-api.herokuapp.com/signup", {loginForm})  
+  }
 }

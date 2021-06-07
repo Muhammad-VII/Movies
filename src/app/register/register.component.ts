@@ -50,6 +50,7 @@ export class RegisterComponent implements OnInit {
       else 
       {
         this.error = response.errors.email.message;
+        this.registerForm.reset();
       }
     });
   }
