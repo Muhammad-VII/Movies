@@ -1,0 +1,32 @@
+.social-media i {
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  -o-transition: color 0.5s;
+}
+
+.social-media :nth-child(1):hover {
+  color: rgb(122, 0, 204);
+  cursor: pointer;
+}
+
+.social-media :nth-child(2):hover {
+  color: rgb(0, 199, 27);
+  cursor: pointer;
+}
+
+.social-media :nth-child(3):hover {
+  color: #0674E7;
+  cursor: pointer;
+}
+
+.social-media :nth-child(4):hover {
+  color: rgb(192, 0, 0);
+  cursor: pointer;
+}
+
+.social-media :nth-child(5):hover {
+  color: rgb(206, 127, 0);
+  cursor: pointer;
+}

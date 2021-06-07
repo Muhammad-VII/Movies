@@ -1,0 +1,59 @@
+// Start Global variabls
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&display=swap");
+// @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Playfair+Display&display=swap');
+
+$bgColor: #131722;
+$jumbotronBg: #131a2c;
+$lightBgColor: #24baef;
+$bgTransparent: rgba(36, 186, 239, 0.6);
+$borderColor: #a8a8a83d;
+$borderHeight: #a8a8a83d;
+$mainColor: 1px;
+$secondFontColor: #949cb0;
+$fontColor: #fff;
+// End Global variabls
+
+// Start global rules
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Limelight', cursive;
+  font-family: 'Playfair Display', serif;
+  box-sizing: border-box;
+  background-color: $bgColor;
+  color: $fontColor;
+}
+
+// nav {
+//   box-shadow: rgb(50, 50, 93) 0px 14px 19px -5px;
+// }
+
+nav .nav-link {
+  font-size: 19px;
+  font-weight: bolder;
+  color: $fontColor !important;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  -o-transition: color 0.5s;
+}
+
+nav .nav-link:hover {
+  color: rgb(0, 210, 230) !important;
+}
+
+.navbar-brand:hover {
+  cursor: pointer;
+}
+// End global rules
+
+.jumbotron{
+  background-color: $jumbotronBg;
+  box-shadow: rgb(50, 50, 93) 0px 14px 19px -5px;
+}
