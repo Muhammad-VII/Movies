@@ -12,12 +12,12 @@ export class AuthService {
   currentUser = new BehaviorSubject(null);
   register(formData:any):Observable<any>
     {
-     return this._HttpClient.post("https://route-egypt-api.herokuapp.com/signup", {formData});
+     return this._HttpClient.post("https://route-egypt-api.herokuapp.com/signup", formData);
     }
 
   login(loginForm: any):Observable<any>
   {
-    return this._HttpClient.post("https://route-egypt-api.herokuapp.com/signup", {loginForm})  
+    return this._HttpClient.post("https://route-egypt-api.herokuapp.com/signin", loginForm)  
   }
   saveCurrentUser(){
     let token:any = localStorage.getItem('token')

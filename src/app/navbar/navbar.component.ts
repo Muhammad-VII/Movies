@@ -10,30 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   isLogin: boolean = false;
-  showNavLinks: boolean = true;
   constructor(private _Router: Router, _AuthService: AuthService) {
     _AuthService.currentUser.subscribe(() => {
       if(_AuthService.currentUser.getValue() != null){
-        this.isLogin = true;
+        this.isLogin = false;
       }
       else
       {
-        this.isLogin = false
+        this.isLogin = true
       }
     })
     
     let token = localStorage.getItem('token');
     if (token) {
       // logged in
-      this.showNavLinks = true;
+      this.isLogin = false;
     } else {
       // logged out
-      this.showNavLinks = false;
-    }
-    if (_AuthService.currentUser != null) {
       this.isLogin = true;
-    } else {
-      this.isLogin = false;
     }
   }
 

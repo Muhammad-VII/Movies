@@ -22,22 +22,22 @@ export class SigninComponent implements OnInit {
     password: new FormControl(null, [Validators.required])
   })
 
-  login(){
-    if(this.loginForm.invalid){
-      return
+  submitLoginForm(loginForm: FormGroup) {
+    if(loginForm.invalid){
+      return;
     }
-    this._AuthService.login(this.loginForm.value).subscribe((data) => {
-      if(data.message == 'success')
+    this._AuthService.register(this.loginForm.value).subscribe((data) => {
+      if (data.message == 'success')
       {
-        localStorage.setItem('userSession', data.token)
-        this._AuthService.saveCurrentUser()
-        this._Router.navigateByUrl("/home")
+        localStorage.setItem("userToken", data.token)
+        this._Router.navigate(['/home']);
       }
-      else
+      else 
       {
         alert(data.message)
         this.loginForm.reset()
+        console.log("m4 tmam")
       }
-    })
+    });
   }
 }
